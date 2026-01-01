@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Page Title</title>
+    <!-- Optional: Link to a stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Your content goes here -->
+    <nav class="navbar">
+        <div class="logo">Where in the World?</div>
+        <div class="logo" id="ld" onclick="dark_light()"><i class="fa fa-moon-o" style="font-size:20px"></i>    Dark Mode</div>
+    
+      </nav>
+      <div class="main-content" id="main">
+       
+        <div class="search-drop">
+      
+          <div class="search-container">
+       
+            <input id="search" type="text" placeholder="Search for a country..." />
+            <span class="icon">🔍</span>
+          </div>
+
+          <div class="dropdown">
+            <button class="dropdown-toggle">Filter by region ▼</button>
+          
+            <div class="dropdown-menu">
+              <div class="dropdown-item" >All Regions</div>
+              <div class="dropdown-item">Africa</div>
+              <div class="dropdown-item">America</div>
+              <div class="dropdown-item">Asia</div>
+              <div class="dropdown-item">Europe</div>
+              <div class="dropdown-item">Oceania</div>
+            </div>
+          </div>
+          
+        
+    </div>
+
+    <div class="cards" id="cards">
+    
+    
+   
+    </div>
+    <!-- Optional: Link to a JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>

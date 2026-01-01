@@ -1,0 +1,439 @@
+* {
+box-sizing: border-box;
+margin:0;
+padding:0;
+font-family: Nunito Sans;
+
+}
+
+body {
+  background-color:  hsl(0, 0%, 99%);
+}
+
+.navbar {
+    position: fixed;   /* stays at top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-left:8rem;
+    padding-right:8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 9vh;
+   
+    background: #ffffff;
+    border-bottom: 1px solid #eee;
+  
+    z-index: 1000;
+  
+}
+
+.logo {
+    font-size: 1.25rem;
+    font-weight: 800;
+  }
+
+  #ld {
+   font-size:  .8rem;
+}
+  
+  .main-content {
+    padding-top: 12vh; /* Matches the navbar's height */
+    display:flex;
+     justify-content: center;
+     flex-direction: column;
+     padding-left:8rem;
+     padding-right:8rem;
+  
+   
+}
+
+.search-drop {
+  display:flex;
+  
+  justify-content: space-between;
+  
+ 
+}
+.search-container {
+  position: relative;
+  width: 30%;
+  
+}
+
+.search-container input {
+  width: 100%;
+  padding: 1em 35px 1rem 55px;
+  font-size: 1rem;
+
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.6;
+  font-size: 1rem;
+}
+
+
+
+
+/* Dropdown container */
+.dropdown {
+  position: relative;
+  
+  font-family: sans-serif;
+  
+}
+
+/* Toggle button */
+.dropdown-toggle {
+  width: 100%;
+  padding: 10px 14px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: left;
+  font-size: 16px;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  position: absolute;
+  top: 110%; /* slightly below button */
+  left: 0;
+  width: 100%;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  overflow: hidden;
+  
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: 0.25s ease;
+}
+
+/* Show the menu */
+.dropdown.open .dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: all;
+}
+
+/* Items */
+.dropdown-item {
+  padding: 10px 14px;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background: #f0f0f0;
+}
+
+.cards {
+  padding-top:2em;
+  display:flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-bottom:2em;
+  gap: 1rem;
+}
+
+.card {
+  width: 250px;
+  
+  background: #fff;
+  border-radius: 6px;
+ overflow: hidden;         
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  margin-bottom:2em;
+  height:300px;
+   
+
+}
+
+/* Top image = half the card */
+.card img {
+width: 100%;
+   height: 50%; 
+  display: block;
+  object-fit: cover;   /* keeps image cropped nicely */
+  
+}
+    
+
+/* Bottom text area */
+.card-content {
+  padding: 1rem 1.2rem;
+  height: 50%; 
+}
+
+.card-content h3 {
+  margin: 0 0 0.5rem;
+ font-size: 1rem;
+padding-bottom: 1em;
+padding-top: 1em;
+font-weight: 700;
+overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.card-content p {
+  color: #555;
+  line-height: 1.5;
+  font-size: .7em;
+  
+}
+
+.back {
+  display:flex;
+   align-items: center;
+  justify-content: left;
+  
+}
+
+.back-btn {
+
+  background: #fff;
+  color: #333;
+  padding: 10px 38px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  width: fit-content;
+  
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+}
+
+.back-btn::before {
+  content: "←"; /* Unicode left arrow */
+  font-size: 18px;
+  line-height: 0;
+}
+
+
+.split-row {
+  display: flex;
+  align-items: center;     /* vertically center text */
+  justify-content: center;
+  gap: 5rem;               /* space between image + text */
+  padding-top: 5rem;
+  
+}
+
+.split-image,
+.split-text {
+  flex: 1;      
+         /* each takes 50% */
+}
+
+.title{
+font-weight: 800;
+    font-size:1.5em;}
+
+.split-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width:500px;
+}
+
+.text-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  
+  flex:1;
+}
+.col {
+ display:flex;
+ flex-direction: column;
+gap:.5rem;
+padding: 2rem 0;
+  
+}
+.split-text {
+  padding: 2rem 0;
+ 
+
+}
+.border-row {
+  display: flex;
+   /* right align (can change if you want) */
+  
+  width:80%;
+ 
+}
+
+.border {
+  padding: .25rem .5rem;
+  
+  width:100px;/* 3 per row */
+ 
+  
+  text-align: center;
+  
+  border: 1px solid #d0d0d0;   /* light grey border */
+  background: #fff;
+  color: #333;
+  border-radius: 6px;
+  font-size: .70rem;
+  
+  overflow: hidden;
+  white-space: normal;
+  overflow-wrap: break-word;}
+
+
+
+.border-text {
+  font-size:.75rem;
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  margin-right: 1rem;
+  
+}
+
+.borders {
+  display:flex;
+  flex-wrap: wrap;
+  
+  gap:0.5rem;
+ 
+}
+
+
+h3 {
+   white-space: nowrap;
+  overflow-wrap: normal;
+}
+
+.dark-mode {
+  background-color: hsl(207, 26%, 17%);
+  color:  hsl(0, 100%, 100%)
+}
+
+.dark-mode-nav {
+  background-color: hsl(209, 23%, 22%);
+   border-bottom: none;
+}
+
+.dark-mode-card {
+ background-color: hsl(209, 23%, 22%);
+}
+
+@media (max-width: 850px) {
+  .split-row {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .split-image, .split-text {
+    flex: unset;
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+  @media (max-width: 820px) { 
+
+    body {
+
+    padding:2rem;
+
+    }
+   .navbar { 
+    padding-left:2.5rem;
+    padding-right:2.5rem;
+    height: 11vh;
+ 
+    
+   
+   }
+   .main-content {
+    padding-top: 13vh; /* Matches the navbar's height */
+    
+}
+
+.logo {
+  font-size:  .8rem;
+  font-weight: 800;
+ 
+}
+
+#ld {
+   font-size:  .5rem;
+}
+
+
+.search-container {
+  
+  width: 100%;
+}
+
+.search-drop {
+  flex-direction: column;
+
+  }
+
+  .main-content {
+    padding-left: .5rem;
+    padding-right: .5rem;
+   
+  }
+
+  .cards {
+    display:flex;
+  justify-content: center;
+  flex-wrap: no-wrap;
+  padding-bottom:2em;
+  gap: 3rem;
+  }
+
+  .content {
+    grid-template-columns: 1fr;
+   
+  }
+
+  .border-row { 
+  flex-direction:column;
+justify-content: left;
+}
+
+  .title {
+    text-align: left;
+    
+  
+    
+  }
+
+.text-container{
+  display:flex;
+  flex-direction: column;
+}  
+
+.border-text {
+   justify-content: left;
+   margin-bottom:1rem;
+}
+
+}
+
